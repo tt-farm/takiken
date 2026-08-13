@@ -1,0 +1,853 @@
+/* =========================================
+   Base
+========================================= */
+
+:root {
+  --green: #1f5f2b;
+  --green-dark: #174721;
+  --green-light: #edf5ef;
+
+  --black: #202020;
+  --gray-dark: #555;
+  --gray: #777;
+  --gray-light: #e7e7e7;
+  --background: #ffffff;
+  --background-soft: #f7f8f7;
+
+  --max-width: 1180px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+
+  color: var(--black);
+  background: var(--background);
+
+  font-family:
+    "Yu Gothic",
+    "YuGothic",
+    "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans",
+    "Meiryo",
+    sans-serif;
+
+  line-height: 1.8;
+
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  width: min(calc(100% - 48px), var(--max-width));
+  margin: 0 auto;
+}
+
+.section {
+  padding: 90px 0;
+}
+
+.section-soft {
+  background: var(--background-soft);
+}
+
+
+/* =========================================
+   Header
+========================================= */
+
+.site-header {
+  background: #fff;
+  border-bottom: 1px solid var(--gray-light);
+}
+
+.header-inner {
+  min-height: 110px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 30px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.brand-logo {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+}
+
+.brand-text {
+  line-height: 1.2;
+}
+
+.company-type {
+  margin: 0 0 3px;
+
+  font-size: 12px;
+  letter-spacing: 0.16em;
+}
+
+.company-name {
+  margin: 0;
+
+  font-size: 29px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.company-en {
+  margin: 5px 0 0;
+
+  color: var(--gray);
+  font-size: 11px;
+  letter-spacing: 0.25em;
+}
+
+.header-tel {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.tel-icon {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+.header-tel > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.tel-label {
+  color: var(--gray);
+  font-size: 11px;
+}
+
+.tel-number {
+  color: var(--green);
+  font-size: 21px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
+
+/* =========================================
+   Hero
+========================================= */
+
+.hero {
+  overflow: hidden;
+  background:
+    linear-gradient(
+      90deg,
+      #fff 0%,
+      #fff 45%,
+      #f7f7f5 100%
+    );
+}
+
+.hero-inner {
+  min-height: 570px;
+
+  display: grid;
+  grid-template-columns: 48% 52%;
+  align-items: center;
+}
+
+.hero-copy {
+  position: relative;
+  z-index: 2;
+
+  padding: 70px 0;
+}
+
+.eyebrow {
+  margin: 0 0 22px;
+
+  color: var(--green);
+
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+}
+
+.hero h1 {
+  margin: 0;
+
+  font-size: clamp(48px, 5.3vw, 78px);
+  font-weight: 700;
+  line-height: 1.22;
+
+  letter-spacing: 0.04em;
+}
+
+.hero h1 span {
+  position: relative;
+}
+
+.hero h1 span::after {
+  content: "";
+
+  position: absolute;
+  z-index: -1;
+
+  left: -8px;
+  right: -8px;
+  bottom: 4px;
+
+  height: 17px;
+
+  background: rgba(31, 95, 43, 0.10);
+
+  transform: rotate(-1.5deg);
+}
+
+.hero-lead {
+  margin: 32px 0 0;
+
+  color: var(--gray-dark);
+
+  font-size: 16px;
+  letter-spacing: 0.05em;
+}
+
+.hero-visual {
+  height: 100%;
+
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-end;
+
+  position: relative;
+}
+
+.hero-visual img {
+  width: 115%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+
+  opacity: 0.82;
+
+  mix-blend-mode: multiply;
+}
+
+.hero-visual::before {
+  content: "";
+
+  position: absolute;
+  z-index: 1;
+
+  left: -1px;
+  top: 0;
+
+  width: 35%;
+  height: 100%;
+
+  background: linear-gradient(
+    90deg,
+    #fff 0%,
+    rgba(255,255,255,0.84) 45%,
+    rgba(255,255,255,0) 100%
+  );
+}
+
+
+/* =========================================
+   Section Heading
+========================================= */
+
+.section-heading {
+  margin-bottom: 42px;
+}
+
+.section-en {
+  margin: 0 0 8px;
+
+  color: var(--green);
+
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+}
+
+.section-heading h2 {
+  margin: 0;
+
+  font-size: 34px;
+  line-height: 1.4;
+  letter-spacing: 0.06em;
+}
+
+
+/* =========================================
+   Intro
+========================================= */
+
+.intro {
+  text-align: center;
+}
+
+.intro .section-heading {
+  margin-bottom: 24px;
+}
+
+.intro-text {
+  max-width: 760px;
+  margin: 0 auto;
+
+  color: var(--gray-dark);
+
+  font-size: 16px;
+}
+
+
+/* =========================================
+   Business
+========================================= */
+
+.business-image-wrap {
+  padding: 38px;
+
+  background: #fff;
+
+  border: 1px solid #e1e5e1;
+}
+
+.business-image {
+  width: 100%;
+  max-width: 1050px;
+
+  margin: 0 auto;
+}
+
+
+/* =========================================
+   Strengths
+========================================= */
+
+.strength-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 28px;
+}
+
+.strength-card {
+  padding: 42px 32px;
+
+  text-align: center;
+
+  border: 1px solid #e2e5e2;
+
+  background: #fff;
+}
+
+.strength-icon {
+  width: 86px;
+  height: 86px;
+
+  margin: 0 auto 26px;
+
+  object-fit: contain;
+}
+
+.strength-card h3 {
+  margin: 0 0 14px;
+
+  color: var(--green-dark);
+
+  font-size: 20px;
+  letter-spacing: 0.04em;
+}
+
+.strength-card p {
+  margin: 0;
+
+  color: var(--gray-dark);
+
+  font-size: 14px;
+}
+
+
+/* =========================================
+   Company
+========================================= */
+
+.company-table {
+  border-top: 1px solid #d8ddd8;
+}
+
+.company-row {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+
+  border-bottom: 1px solid #d8ddd8;
+}
+
+.company-label,
+.company-value {
+  padding: 22px 24px;
+}
+
+.company-label {
+  color: var(--green-dark);
+
+  font-weight: 700;
+
+  background: #edf3ee;
+}
+
+.company-value {
+  background: #fff;
+}
+
+.company-value a {
+  color: var(--green);
+  font-weight: 700;
+}
+
+
+/* =========================================
+   Contact
+========================================= */
+
+.contact {
+  padding: 75px 0;
+
+  color: #fff;
+  background: var(--green-dark);
+}
+
+.contact-inner {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+
+  align-items: center;
+
+  gap: 70px;
+}
+
+.contact-en {
+  color: #c9dfce;
+}
+
+.contact-heading h2 {
+  margin: 0;
+
+  font-size: 30px;
+  line-height: 1.55;
+}
+
+.contact-actions {
+  display: grid;
+  gap: 12px;
+}
+
+.contact-item {
+  min-height: 92px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 18px;
+
+  padding: 18px 22px;
+
+  color: var(--green-dark);
+  background: #fff;
+}
+
+.contact-icon {
+  width: 34px;
+  height: 34px;
+
+  object-fit: contain;
+}
+
+.contact-item > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-label {
+  color: var(--gray);
+
+  font-size: 12px;
+}
+
+.contact-number {
+  margin-top: 2px;
+
+  font-size: 25px;
+  font-weight: 700;
+
+  letter-spacing: 0.05em;
+}
+
+.contact-mail {
+  margin-top: 3px;
+
+  font-size: 16px;
+  font-weight: 700;
+}
+
+
+/* =========================================
+   Footer
+========================================= */
+
+.site-footer {
+  padding: 36px 0;
+
+  color: #fff;
+
+  background: #202622;
+}
+
+.footer-inner {
+  display: flex;
+  align-items: center;
+}
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+}
+
+.footer-logo {
+  width: 48px;
+  height: 48px;
+
+  object-fit: contain;
+}
+
+.footer-company {
+  margin: 0;
+
+  font-weight: 700;
+
+  letter-spacing: 0.08em;
+}
+
+.footer-en {
+  margin: 3px 0 0;
+
+  color: #aeb8b0;
+
+  font-size: 10px;
+
+  letter-spacing: 0.25em;
+}
+
+
+/* =========================================
+   Responsive
+========================================= */
+
+.sp-only {
+  display: none;
+}
+
+@media (max-width: 800px) {
+
+  .container {
+    width: min(calc(100% - 32px), var(--max-width));
+  }
+
+  .section {
+    padding: 64px 0;
+  }
+
+
+  /* Header */
+
+  .header-inner {
+    min-height: 88px;
+
+    gap: 12px;
+  }
+
+  .brand {
+    gap: 10px;
+  }
+
+  .brand-logo {
+    width: 46px;
+    height: 46px;
+  }
+
+  .company-type {
+    font-size: 9px;
+  }
+
+  .company-name {
+    font-size: 21px;
+  }
+
+  .company-en {
+    font-size: 8px;
+  }
+
+  .header-tel {
+    gap: 7px;
+  }
+
+  .tel-icon {
+    width: 22px;
+    height: 22px;
+  }
+
+  .tel-label {
+    display: none;
+  }
+
+  .tel-number {
+    font-size: 13px;
+    letter-spacing: 0;
+  }
+
+
+  /* Hero */
+
+  .hero-inner {
+    min-height: unset;
+
+    grid-template-columns: 1fr;
+  }
+
+  .hero-copy {
+    padding: 58px 0 24px;
+  }
+
+  .eyebrow {
+    margin-bottom: 15px;
+
+    font-size: 9px;
+  }
+
+  .hero h1 {
+    font-size: clamp(38px, 11vw, 55px);
+
+    line-height: 1.25;
+  }
+
+  .hero-lead {
+    margin-top: 23px;
+
+    font-size: 14px;
+  }
+
+  .hero-visual {
+    height: 260px;
+  }
+
+  .hero-visual img {
+    width: 100%;
+    height: 100%;
+
+    object-position: center;
+  }
+
+  .hero-visual::before {
+    width: 100%;
+    height: 35%;
+
+    top: 0;
+
+    background: linear-gradient(
+      180deg,
+      #fff 0%,
+      rgba(255,255,255,0) 100%
+    );
+  }
+
+
+  /* Sections */
+
+  .section-heading {
+    margin-bottom: 30px;
+  }
+
+  .section-heading h2 {
+    font-size: 27px;
+  }
+
+  .intro {
+    text-align: left;
+  }
+
+  .intro-text {
+    font-size: 14px;
+  }
+
+
+  /* Business */
+
+  .business-image-wrap {
+    padding: 12px;
+  }
+
+  .business-image {
+    width: 100%;
+    min-width: 0;
+    height: auto;
+  }
+
+
+  /* Strengths */
+
+  .strength-grid {
+    grid-template-columns: 1fr;
+
+    gap: 14px;
+  }
+
+  .strength-card {
+    display: grid;
+    grid-template-columns: 72px 1fr;
+
+    column-gap: 20px;
+
+    align-items: center;
+
+    padding: 25px 22px;
+
+    text-align: left;
+  }
+
+  .strength-icon {
+    grid-row: 1 / 3;
+
+    width: 66px;
+    height: 66px;
+
+    margin: 0;
+  }
+
+  .strength-card h3 {
+    margin-bottom: 5px;
+
+    font-size: 18px;
+  }
+
+  .strength-card p {
+    font-size: 13px;
+  }
+
+
+  /* Company */
+
+  .company-row {
+    grid-template-columns: 1fr;
+  }
+
+  .company-label {
+    padding: 11px 16px;
+
+    font-size: 13px;
+  }
+
+  .company-value {
+    padding: 15px 16px 20px;
+
+    font-size: 14px;
+  }
+
+
+  /* Contact */
+
+  .contact {
+    padding: 58px 0;
+  }
+
+  .contact-inner {
+    grid-template-columns: 1fr;
+
+    gap: 32px;
+  }
+
+  .contact-heading h2 {
+    font-size: 24px;
+  }
+
+  .contact-item {
+    min-height: 82px;
+
+    padding: 16px;
+  }
+
+  .contact-number {
+    font-size: 22px;
+  }
+
+  .contact-mail {
+    font-size: 14px;
+  }
+
+
+  /* Footer */
+
+  .site-footer {
+    padding: 28px 0;
+  }
+
+  .footer-logo {
+    width: 40px;
+    height: 40px;
+  }
+
+  .footer-company {
+    font-size: 14px;
+  }
+
+
+  .sp-only {
+    display: inline;
+  }
+
+}
+
+@media (max-width: 430px) {
+
+  .header-tel .tel-icon {
+    display: none;
+  }
+
+  .tel-number {
+    font-size: 11px;
+  }
+
+  .hero h1 {
+    font-size: 37px;
+  }
+
+}
